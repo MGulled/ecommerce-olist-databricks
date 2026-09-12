@@ -1,0 +1,20 @@
+bundle:
+  name: ecommerce_olist_pipeline
+
+resources:
+  pipelines:
+    ecommerce_pipeline: 
+      name: ecommerce_pipeline
+      catalog: ecommerce_olist
+      target: bronze
+      libraries:
+        - glob:
+            include: ecommerce_pipeline/transformations/**/*.py
+      continuous: true
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://adb-7405608006318470.10.azuredatabricks.net
