@@ -9,7 +9,7 @@ resources:
       target: bronze
       libraries:
         - glob:
-            include: ecommerce_pipeline/transformations/**/*.py
+            include: ecommerce_pipeline/transformations/**
       continuous: true
 
 targets:
