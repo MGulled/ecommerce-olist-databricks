@@ -48,7 +48,7 @@ jobs:
                 schema: gold
                 host: ${DATABRICKS_HOST}
                 http_path: /sql/1.0/warehouses/4f9439f94632a4af
-                auth_type: oauth-m2m
+                auth_type: oauth
                 client_id: ${DATABRICKS_CLIENT_ID}
                 client_secret: ${DATABRICKS_CLIENT_SECRET}
                 threads: 4
