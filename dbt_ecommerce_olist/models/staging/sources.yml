@@ -1,0 +1,13 @@
+sources:
+  - name: silver
+    catalog: ecommerce_olist
+    schema: silver
+    tables:
+      - name: category
+      - name: customer
+      - name: order_items
+      - name: order_payments
+      - name: orders
+      - name: products
+      - name: new_orders
+      - name: sellers
