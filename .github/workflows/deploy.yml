@@ -17,3 +17,52 @@ jobs:
       - uses: databricks/setup-cli@main
       - run: databricks bundle validate -t dev
       - run: databricks bundle deploy -t dev
+
+  dbt:
+    runs-on: ubuntu-latest
+    needs: deploy
+    env:
+      DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+      DATABRICKS_CLIENT_ID: ${{ secrets.DATABRICKS_CLIENT_ID }}
+      DATABRICKS_CLIENT_SECRET: ${{ secrets.DATABRICKS_CLIENT_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dbt
+        run: pip install dbt-databricks
+
+      - name: Create profiles.yml
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml << EOF
+          dbt_ecommerce_olist:
+            outputs:
+              dev:
+                type: databricks
+                catalog: ecommerce_olist
+                schema: gold
+                host: ${DATABRICKS_HOST}
+                http_path: /sql/1.0/warehouses/4f9439f94632a4af
+                auth_type: oauth-m2m
+                client_id: ${DATABRICKS_CLIENT_ID}
+                client_secret: ${DATABRICKS_CLIENT_SECRET}
+                threads: 4
+            target: dev
+          EOF
+
+      - name: dbt deps
+        working-directory: dbt_ecommerce_olist
+        run: dbt deps
+
+      - name: dbt run
+        working-directory: dbt_ecommerce_olist
+        run: dbt run
+
+      - name: dbt test
+        working-directory: dbt_ecommerce_olist
+        run: dbt test
