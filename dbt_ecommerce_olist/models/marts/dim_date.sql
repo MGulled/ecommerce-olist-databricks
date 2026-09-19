@@ -1,5 +1,5 @@
 with date_spine as (
-    select explode(sequence(to_date('2016-01-01'), to_date('2019-12-31'), interval 1 day)) as date_day
+    select explode(sequence(to_date('2016-01-01'), date_add(current_date(), 365), interval 1 day)) as date_day
 )
 select
     date_day,
