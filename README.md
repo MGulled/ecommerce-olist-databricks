@@ -46,6 +46,15 @@ The pipeline follows a **bronze → silver → gold** medallion architecture:
 - Dimensions: `dim_customers`, `dim_products`, `dim_sellers`, `dim_date` (a generated calendar spine)
 - Facts: `fact_orders`, `fact_order_items`, `fact_payments`
 - Built on 8 dbt staging models sitting on top of a `sources.yml` declaring the silver schema
+- Built on 8 dbt staging models sitting on top of a `sources.yml` declaring the silver schema
+
+### Data Lineage
+
+<img width="1327" height="702" alt="bilde" src="https://github.com/user-attachments/assets/6c0ba332-d312-436f-be02-021ca07560e3" />
+
+The dbt-generated lineage graph shows the full dependency chain from silver sources through staging models into the gold-layer dimensions and facts — 8 staging models feeding into 4 dimension tables and 3 fact tables.
+
+Generated with `dbt docs generate` and `dbt docs serve`.
 
 ## The Streaming Component
 
