@@ -40,7 +40,7 @@ jobs:
         run: |
           mkdir -p ~/.dbt
           cat > ~/.dbt/profiles.yml << EOF
-          dbt_ecommerce_olist:
+          dbt:
             outputs:
               dev:
                 type: databricks
@@ -56,13 +56,13 @@ jobs:
           EOF
 
       - name: dbt deps
-        working-directory: dbt_ecommerce_olist
+        working-directory: dbt
         run: dbt deps
 
       - name: dbt run
-        working-directory: dbt_ecommerce_olist
+        working-directory: dbt
         run: dbt run
 
       - name: dbt test
-        working-directory: dbt_ecommerce_olist
+        working-directory: dbt
         run: dbt test
