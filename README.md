@@ -3,7 +3,8 @@
 An end-to-end batch + streaming data engineering pipeline built on Azure Databricks, dbt, and Power BI — using the Olist Brazilian ecommerce dataset plus a self-built synthetic streaming order feed.
 
 ![Architecture Diagram](docs/architecture-diagram.png)
-<!-- PLACEHOLDER: add an architecture diagram here (bronze -> silver -> gold -> Power BI) -->
+<img width="916" height="385" alt="bilde" src="https://github.com/user-attachments/assets/6fa83bcd-86f6-4b4c-8f23-82f6bada3596" />
+
 
 This project demonstrates a full medallion architecture pipeline — raw ingestion, transformation, testing, and visualization — with both a historical batch dataset and a live-simulated streaming leg unified into a single analytics layer, deployed via CI/CD.
 
@@ -78,19 +79,19 @@ Three Power BI report pages, connected live to the gold schema via the Databrick
 
 ### Overview
 ![Overview Page](docs/screenshot-overview.png)
-<!-- PLACEHOLDER: add overview page screenshot -->
+<img width="982" height="552" alt="bilde" src="https://github.com/user-attachments/assets/0eec12f5-7767-4486-ae15-975774e124de" />
 
 Revenue trend, total orders, average order value, and order volume by payment method.
 
 ### Top Products & Categories
 ![Top Products Page](docs/screenshot-top-products.png)
-<!-- PLACEHOLDER: add top products page screenshot -->
+<img width="1037" height="711" alt="bilde" src="https://github.com/user-attachments/assets/4d5db4a5-63de-4075-b5b0-b05848422c7c" />
 
 Revenue and unit volume by product category, with a product-level detail table. **Finding:** Bed Bath Table is the #1 category by units sold but only #3 by revenue — Health Beauty earns more overall despite lower volume, suggesting a higher average price point per item.
 
 ### Delivery Performance
 ![Delivery Performance Page](docs/screenshot-delivery.png)
-<!-- PLACEHOLDER: add delivery performance page screenshot -->
+<img width="1111" height="728" alt="bilde" src="https://github.com/user-attachments/assets/dede093e-c9fa-40de-8b67-c7b5ffbca53e" />
 
 On-time delivery rate, average delivery time, and average delay (for late orders), broken down by month and by customer state. **Findings:**
 - Overall on-time delivery rate: **91.92%**
@@ -201,6 +202,3 @@ You'll need a local `profiles.yml` pointing at your SQL Warehouse's HTTP path, u
 5. Select the tables under your `gold` schema and load them in.
 6. Rebuild the relationships between fact and dimension tables as described in the [Architecture](#architecture) section above.
 
-## License
-
-<!-- Add a license if you want one, e.g. MIT -->
