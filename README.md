@@ -2,7 +2,6 @@
 
 An end-to-end batch + streaming data engineering pipeline built on Azure Databricks, dbt, and Power BI — using the Olist Brazilian ecommerce dataset plus a self-built synthetic streaming order feed.
 
-![Architecture Diagram](docs/architecture-diagram.png)
 <img width="916" height="385" alt="bilde" src="https://github.com/user-attachments/assets/6fa83bcd-86f6-4b4c-8f23-82f6bada3596" />
 
 
@@ -78,19 +77,16 @@ All tests pass as part of the CI/CD `dbt test` step on every push.
 Three Power BI report pages, connected live to the gold schema via the Databricks SQL Warehouse:
 
 ### Overview
-![Overview Page](docs/screenshot-overview.png)
 <img width="982" height="552" alt="bilde" src="https://github.com/user-attachments/assets/0eec12f5-7767-4486-ae15-975774e124de" />
 
 Revenue trend, total orders, average order value, and order volume by payment method.
 
 ### Top Products & Categories
-![Top Products Page](docs/screenshot-top-products.png)
 <img width="1037" height="711" alt="bilde" src="https://github.com/user-attachments/assets/4d5db4a5-63de-4075-b5b0-b05848422c7c" />
 
 Revenue and unit volume by product category, with a product-level detail table. **Finding:** Bed Bath Table is the #1 category by units sold but only #3 by revenue — Health Beauty earns more overall despite lower volume, suggesting a higher average price point per item.
 
 ### Delivery Performance
-![Delivery Performance Page](docs/screenshot-delivery.png)
 <img width="1111" height="728" alt="bilde" src="https://github.com/user-attachments/assets/dede093e-c9fa-40de-8b67-c7b5ffbca53e" />
 
 On-time delivery rate, average delivery time, and average delay (for late orders), broken down by month and by customer state. **Findings:**
