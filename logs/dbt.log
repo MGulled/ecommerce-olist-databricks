@@ -1,0 +1,132 @@
+[0m18:54:26.377357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAA5A1ACF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAA3250E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAA81EB9D0>]}
+
+
+============================== 18:54:26.386524 | c20f1d6d-718f-446d-9358-0c515939938f ==============================
+[0m18:54:26.386524 [info ] [MainThread]: Running with dbt=1.12.3
+[0m18:54:26.387446 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'no_print': 'None', 'partial_parse': 'True', 'warn_error': 'None', 'log_path': 'logs', 'log_format': 'default', 'invocation_command': 'dbt init dbt_project', 'introspect': 'True', 'use_experimental_parser': 'False', 'static_parser': 'True', 'use_colors': 'True', 'log_cache_events': 'False', 'profiles_dir': 'C:\\Users\\moham\\.dbt', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'maximum_seed_size_mib': '1', 'fail_fast': 'False', 'printer_width': '80', 'cache_selected_only': 'False', 'write_json': 'True', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'hints_enabled': 'True', 'version_check': 'True', 'indirect_selection': 'eager', 'quiet': 'False'}
+[0m18:54:26.426182 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\moham\.dbt
+[0m18:54:26.429898 [debug] [MainThread]: Starter project path: C:\Users\moham\anaconda4\Lib\site-packages\dbt\include\starter_project
+[0m18:54:26.470571 [info ] [MainThread]: Setting up your profile.
+[0m18:57:57.604731 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m18:57:57.605372 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m18:57:57.605809 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m19:14:21.446965 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+list index out of range
+[0m19:14:21.637420 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\moham\anaconda4\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\moham\anaconda4\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\moham\anaconda4\Lib\site-packages\dbt\cli\main.py", line 504, in init
+    results = task.run()
+  File "C:\Users\moham\anaconda4\Lib\site-packages\dbt\task\init.py", line 363, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\moham\anaconda4\Lib\site-packages\dbt\task\init.py", line 265, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moham\anaconda4\Lib\site-packages\dbt\task\init.py", line 182, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moham\anaconda4\Lib\site-packages\dbt\task\init.py", line 166, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\moham\anaconda4\Lib\site-packages\dbt\task\init.py", line 117, in generate_target_from_input
+    choice = option_list[numeric_choice - 1]
+             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+
+[0m19:14:21.778505 [debug] [MainThread]: Command `dbt init` failed at 19:14:21.768963 after 1195.79 seconds
+[0m19:14:21.808017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAAEEA49D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAABD7E8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAAEE849E0>]}
+[0m19:14:21.829992 [debug] [MainThread]: Flushing usage events
+[0m19:14:22.745960 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:55:10.891965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002487A65ACF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024877E90E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002487CE2B9D0>]}
+
+
+============================== 14:55:11.003104 | 92e92f1f-4efa-4319-95e4-56ed917dd1ee ==============================
+[0m14:55:11.003104 [info ] [MainThread]: Running with dbt=1.12.3
+[0m14:55:11.007335 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'fail_fast': 'False', 'target_path': 'None', 'empty': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\moham\\.dbt', 'printer_width': '80', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'cache_selected_only': 'False', 'hints_enabled': 'True', 'maximum_seed_size_mib': '1', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'log_cache_events': 'False', 'log_path': 'logs', 'use_colors': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'log_format': 'default', 'invocation_command': 'dbt init dbt_ecommerce_olist', 'version_check': 'True', 'no_print': 'None', 'partial_parse': 'True'}
+[0m14:55:11.123381 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\moham\.dbt
+[0m14:55:11.140126 [debug] [MainThread]: Starter project path: C:\Users\moham\anaconda4\Lib\site-packages\dbt\include\starter_project
+[0m14:55:12.048351 [info ] [MainThread]: Setting up your profile.
+[0m14:55:23.455982 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m14:55:23.456681 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m14:55:23.457216 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m15:00:07.240343 [info ] [MainThread]: Profile dbt_ecommerce_olist written to C:\Users\moham\.dbt\profiles.yml using target's profile_template.yml and your supplied values.
+[0m15:00:07.490854 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m15:00:07.522113 [info ] [MainThread]: dbt version: 1.12.3
+[0m15:00:07.524888 [info ] [MainThread]: python version: 3.14.6
+[0m15:00:07.526533 [info ] [MainThread]: python path: C:\Users\moham\anaconda4\python.exe
+[0m15:00:07.530410 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m15:00:11.163001 [info ] [MainThread]: Using profiles dir at C:\Users\moham\.dbt
+[0m15:00:11.163925 [info ] [MainThread]: Using profiles.yml file at C:\Users\moham\.dbt\profiles.yml
+[0m15:00:11.164696 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\moham\projects\ecommerce-olist-databricks\dbt_ecommerce_olist\dbt_project.yml
+[0m15:00:11.166253 [info ] [MainThread]: adapter type: databricks
+[0m15:00:11.167189 [info ] [MainThread]: adapter version: 1.12.5
+[0m15:00:11.738294 [info ] [MainThread]: Configuration:
+[0m15:00:11.739090 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:00:11.739710 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:00:11.740291 [info ] [MainThread]: Required dependencies:
+[0m15:00:11.750815 [debug] [MainThread]: Executing "git --help"
+[0m15:00:12.029244 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:00:12.036770 [debug] [MainThread]: STDERR: "b''"
+[0m15:00:12.037599 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:00:12.038332 [info ] [MainThread]: Connection:
+[0m15:00:12.039006 [info ] [MainThread]:   host: adb-7405608006318470.10.azuredatabricks.net
+[0m15:00:12.039614 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/4f9439f94632a4af
+[0m15:00:12.040232 [info ] [MainThread]:   catalog: ecommerce_olist
+[0m15:00:12.041056 [info ] [MainThread]:   schema: gold
+[0m15:00:12.055865 [info ] [MainThread]: Registered adapter: databricks=1.12.5
+[0m15:00:15.372873 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m15:00:15.373698 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m15:00:16.131510 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type='workspace'): no
+[0m15:00:16.132480 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m15:00:16.133427 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.4.0 (supported)
+[0m15:00:16.134310 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.117.0 (supported)
+[0m15:00:16.140248 [debug] [MainThread]: Using databricks connection "debug"
+[0m15:00:16.140994 [debug] [MainThread]: On debug: select 1 as id
+[0m15:00:16.141557 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:00:19.621634 [error] [MainThread]: databricks-sql-connector adapter: ThriftBackend.attempt_request: Exception: 
+[0m15:00:19.657168 [error] [MainThread]: Databricks adapter: Connection(session-id=Unknown) - Exception while trying to create connection: Error during request to server: : Invalid access token.. 
+Error properties: attempt=1/30, bounded-retry-delay=None, elapsed-seconds=0.1534128189086914/900.0, error-message=: Invalid access token., http-code=403, method=OpenSession, no-retry-reason=non-retryable error, original-exception=, query-id=None, session-id=None
+[0m15:00:19.659721 [debug] [MainThread]: Databricks adapter: Exception while trying to execute query
+select 1 as id
+: Database Error
+  Error during request to server: : Invalid access token.. 
+[0m15:00:19.664221 [debug] [MainThread]: On debug: No close available on handle
+[0m15:00:19.665445 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:00:19.666636 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:00:19.667899 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Database Error
+    Error during request to server: : Invalid access token.. 
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:00:19.670319 [info ] [MainThread]: Your new dbt project "dbt_ecommerce_olist" was created!
+Initialized new project in C:\Users\moham\projects\ecommerce-olist-databricks\dbt_ecommerce_olist\dbt_ecommerce_olist
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:00:19.672170 [info ] [MainThread]: [31mYour profile may need adjustments. You can find the logs of `dbt debug` above[0m
+[0m15:00:19.690821 [debug] [MainThread]: Command `dbt init` succeeded at 15:00:19.685813 after 309.03 seconds
+[0m15:00:19.700859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024803CF5A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024803E32450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024803DD2360>]}
+[0m15:00:19.706458 [debug] [MainThread]: Flushing usage events
+[0m15:00:20.239030 [debug] [MainThread]: An error was encountered while trying to flush usage events
